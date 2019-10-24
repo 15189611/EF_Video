@@ -4,4 +4,10 @@ public class error {
     public void addTest(){
         System.out.println("添加一个方法");
     }
+
+
+    public void addfirst(){
+        System.out.println("添加一个方法");
+    }
+
 }
