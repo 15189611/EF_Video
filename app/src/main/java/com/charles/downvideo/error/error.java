@@ -14,4 +14,8 @@ public class error {
         System.out.println("添加二个方法");
     }
 
+    public void addThree(){
+        System.out.println("添加3个方法");
+    }
+
 }
