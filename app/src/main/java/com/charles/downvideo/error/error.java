@@ -10,4 +10,8 @@ public class error {
         System.out.println("添加一个方法");
     }
 
+    public void addTwo(){
+        System.out.println("添加二个方法");
+    }
+
 }
