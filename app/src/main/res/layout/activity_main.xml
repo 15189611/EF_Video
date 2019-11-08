@@ -18,6 +18,14 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/down_video_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="开始下载全部" />
+
+            <TextView
                 android:id="@+id/down_video_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -11,12 +11,88 @@ public class UrlManager {
     static Queue<String> fourQueue = new LinkedBlockingQueue<>();
     static Queue<String> fiveQueue = new LinkedBlockingQueue<>();
     static Queue<String> sixQueue = new LinkedBlockingQueue<>();
+
     static Queue<String> sevenQueue = new LinkedBlockingQueue<>();
     static Queue<String> eightQueue = new LinkedBlockingQueue<>();
     static Queue<String> nineQueue = new LinkedBlockingQueue<>();
     static Queue<String> tenQueue = new LinkedBlockingQueue<>();
     static Queue<String> elevenQueue = new LinkedBlockingQueue<>();
     static Queue<String> twelveQueue = new LinkedBlockingQueue<>();
+
+    static String ONE_1 = "https://cns2.ef-cdn.com/Juno/15/92/22/v/159222/GE_1.1.1.1.1_rw_x.mp4";
+    static String ONE_2 = "https://cns2.ef-cdn.com/Juno/11/12/07/v/111207/GE_1.1.2_v2.mp4";
+    static String ONE_3 = "https://cns2.ef-cdn.com/Juno/11/12/13/v/111213/GE_1.1.3_v2.mp4";
+    static String ONE_4 = "https://cns2.ef-cdn.com/Juno/11/12/16/v/111216/GE_1.1.4_v2.mp4";
+    static String ONE_5 = "https://cns2.ef-cdn.com/Juno/11/12/17/v/111217/GE_1.2.1_v3.mp4";
+    static String ONE_6 = "https://cns2.ef-cdn.com/Juno/11/12/19/v/111219/GE_1.2.2_v2.mp4";
+    static String ONE_7 = "https://cns2.ef-cdn.com/Juno/11/12/20/v/111220/GE_1.2.3_v2.mp4";
+    static String ONE_8 = "https://cns2.ef-cdn.com/Juno/11/12/21/v/111221/GE_1.2.4_v2.mp4";
+    static String ONE_9 = "https://cns2.ef-cdn.com/Juno/19/85/8/v/19858/0a.3 Scene 1.mp4";
+    static String ONE_10 = "https://cns2.ef-cdn.com/Juno/19/86/1/v/19861/0a.3 Scene 3.mp4";
+    static String ONE_11 = "https://cns2.ef-cdn.com/Juno/11/12/22/v/111222/GE_1.3.3_v2.mp4";
+    static String ONE_12 = "https://cns2.ef-cdn.com/Juno/11/12/23/v/111223/GE_1.3.4_v2.mp4";
+    static String ONE_13 = "https://cns2.ef-cdn.com/Juno/11/12/15/v/111215/GE_1.4.1_v2.mp4";
+    static String ONE_14 = "https://cns2.ef-cdn.com/Juno/19/91/1/v/19911/0a.6 Scene 2.mp4";
+    static String ONE_15 = "https://cns2.ef-cdn.com/Juno/11/12/18/v/111218/GE_1.4.3_v2.mp4";
+    static String ONE_16 = "https://cns2.ef-cdn.com/Juno/19/89/6/v/19896/0a.5 Scene 2.mp4";
+    static String ONE_17 = "https://cns2.ef-cdn.com/Juno/19/91/4/v/19914/0a.7 Scene 1.mp4";
+    static String ONE_18 = "https://cns2.ef-cdn.com/Juno/20/05/8/v/20058/0a.7 Scene 2.mp4";
+    static String ONE_19 = "https://cns2.ef-cdn.com/Juno/11/12/25/v/111225/GE_1.5.3_v2.mp4";
+    static String ONE_20 = "https://cns2.ef-cdn.com/Juno/11/12/24/v/111224/GE_1.5.1_v2.mp4";
+    static String ONE_21 = "https://cns2.ef-cdn.com/Juno/11/12/27/v/111227/GE_1.6.1_v2.mp4";
+    static String ONE_22 = "https://cns2.ef-cdn.com/Juno/11/12/28/v/111228/GE_1.6.2_v2.mp4";
+    static String ONE_23 = "https://cns2.ef-cdn.com/Juno/11/12/29/v/111229/GE_1.6.3_v2.mp4";
+    static String ONE_24 = "https://cns2.ef-cdn.com/Juno/11/12/31/v/111231/GE_1.6.4_v2.mp4";
+
+
+    static String TWO_1 = "https://cns2.ef-cdn.com/Juno/11/12/30/v/111230/GE_2.1.1_v2.mp4";
+    static String TWO_2 = "https://cns2.ef-cdn.com/Juno/15/56/69/v/155669/GE_2.1.2.1.1.mp4";
+    static String TWO_3 = "https://cns2.ef-cdn.com/Juno/19/85/9/v/19859/0b.1 Scene 3_v2.mp4";
+    static String TWO_4 = "https://cns2.ef-cdn.com/Juno/15/56/6/v/15566/1.6 Scene 4.mp4";
+    static String TWO_5 = "https://cns2.ef-cdn.com/Juno/19/88/3/v/19883/0b.3 Scene 1.mp4";
+    static String TWO_6 = "https://cns2.ef-cdn.com/Juno/11/12/32/v/111232/GE_2.2.2_v2.mp4";
+    static String TWO_7 = "https://cns2.ef-cdn.com/Juno/11/12/33/v/111233/GE_2.2.3_v2.mp4";
+    static String TWO_8 = "https://cns2.ef-cdn.com/Juno/11/12/34/v/111234/GE_2.2.4_v2.mp4";
+    static String TWO_9 = "https://cns2.ef-cdn.com/Juno/19/94/5/v/19945/0b.7 Scene 1.mp4";
+    static String TWO_10 = "https://cns2.ef-cdn.com/Juno/19/94/9/v/19949/0b.7 Scene 3.mp4";
+    static String TWO_11 = "https://cns2.ef-cdn.com/Juno/11/12/38/v/111238/GE_2.3.3_v2.mp4";
+    static String TWO_12 = "https://cns2.ef-cdn.com/Juno/11/09/49/v/110949/GE_2.3.4_v2.mp4";
+    static String TWO_13 = "https://cns2.ef-cdn.com/Juno/11/12/37/v/111237/GE_2.4.1_v2.mp4";
+    static String TWO_14 = "https://cns2.ef-cdn.com/Juno/11/12/40/v/111240/GE_2.4.2_v2.mp4";
+    static String TWO_15 = "https://cns2.ef-cdn.com/Juno/11/12/41/v/111241/GE_2.4.3_v2_s.mp4";
+    static String TWO_16 = "https://cns2.ef-cdn.com/Juno/11/12/46/v/111246/GE_2.4.4_v2.mp4";
+    static String TWO_17 = "https://cns2.ef-cdn.com/Juno/19/93/4/v/19934/0b.5 Scene 1_s.mp4";
+    static String TWO_18 = "https://cns2.ef-cdn.com/Juno/11/12/42/v/111242/GE_2.5.2_v2.mp4";
+    static String TWO_19 = "https://cns2.ef-cdn.com/Juno/11/12/45/v/111245/GE_2.5.3_v2.mp4";
+    static String TWO_20 = "https://cns2.ef-cdn.com/Juno/19/93/6/v/19936/0b.5 Scene 2.mp4";
+    static String TWO_21 = "https://cns2.ef-cdn.com/Juno/19/93/9/v/19939/0b.6 Scene 1.mp4";
+    static String TWO_22 = "https://cns2.ef-cdn.com/Juno/11/12/48/v/111248/GE_2.6.2_v3_s.mp4";
+    static String TWO_23 = "https://cns2.ef-cdn.com/Juno/11/97/85/v/119785/GE_2.6.3_v2.mp4";
+    static String TWO_24 = "https://cns2.ef-cdn.com/Juno/11/12/50/v/111250/GE_2.6.4_v3.mp4";
+
+    static String THREE_1 = "https://cns2.ef-cdn.com/Juno/11/12/49/v/111249/GE_3.1.1_v2.mp4";
+    static String THREE_2 = "https://cns2.ef-cdn.com/Juno/11/12/57/v/111257/GE_3.1.2_v2.mp4";
+    static String THREE_3 = "https://cns2.ef-cdn.com/Juno/15/56/5/v/15565/1.6 Scene 3.mp4";
+    static String THREE_4 = "https://cns2.ef-cdn.com/Juno/11/12/59/v/111259/GE_3.1.4_v2.mp4";
+    static String THREE_5 = "https://cns2.ef-cdn.com/Juno/11/12/51/v/111251/GE_3.2.1_v2.mp4";
+    static String THREE_6 = "https://cns2.ef-cdn.com/Juno/15/55/5/v/15555/1.4 Scene 1.mp4";
+    static String THREE_7 = "https://cns2.ef-cdn.com/Juno/11/12/58/v/111258/GE_3.2.4_v2.mp4";
+    static String THREE_8 = "https://cns2.ef-cdn.com/Juno/11/12/60/v/111260/GE_3.3.1_v2.mp4";
+    static String THREE_9 = "https://cns2.ef-cdn.com/Juno/11/12/61/v/111261/GE_3.3.2_v2.mp4";
+    static String THREE_10 = "https://cns2.ef-cdn.com/Juno/11/12/63/v/111263/GE_3.3.3_v2.mp4";
+    static String THREE_11 = "https://cns2.ef-cdn.com/Juno/11/12/66/v/111266/GE_3.3.4_v2.mp4";
+    static String THREE_12 = "https://cns2.ef-cdn.com/Juno/12/21/68/v/122168/GE_3.4.1.3.1.mp4";
+    static String THREE_13 = "https://cns2.ef-cdn.com/Juno/11/12/69/v/111269/GE_3.4.2_v3.mp4";
+    static String THREE_14 = "https://cns2.ef-cdn.com/Juno/11/12/70/v/111270/GE_3.4.3_v2.mp4";
+    static String THREE_15 = "https://cns2.ef-cdn.com/Juno/11/12/71/v/111271/GE_3.4.4_v4.mp4";
+    static String THREE_16 = "https://cns2.ef-cdn.com/Juno/11/12/62/v/111262/GE_3.5.1_v3.mp4";
+    static String THREE_17 = "https://cns2.ef-cdn.com/Juno/11/12/64/v/111264/GE_3.5.2_v2.mp4";
+    static String THREE_18 = "https://cns2.ef-cdn.com/Juno/19/92/7/v/19927/0b.4 Scene 3.mp4";
+    static String THREE_19 = "https://cns2.ef-cdn.com/Juno/11/12/65/v/111265/GE_3.5.4_v2.mp4";
+    static String THREE_20 = "https://cns2.ef-cdn.com/Juno/11/12/67/v/111267/GE_3.6.1_v2.mp4";
+    static String THREE_21 = "https://cns2.ef-cdn.com/Juno/11/12/72/v/111272/GE_3.6.2_v2.mp4";
+    static String THREE_22 = "https://cns2.ef-cdn.com/Juno/11/12/73/v/111273/GE_3.6.3_v2.mp4";
+    static String THREE_23 = "https://cns2.ef-cdn.com/Juno/11/12/76/v/111276/GE_3.6.4_v2.mp4";
 
 
     static String FOUR_1 = "https://cns2.ef-cdn.com/Juno/15/61/5/v/15615/2.4 Scene 1.mp4";
@@ -88,88 +164,106 @@ public class UrlManager {
     static String SIX_20 = "https://cns2.ef-cdn.com/Juno/12/63/61/v/126361/GE_6.5.4_v2.mp4";
     static String SIX_21 = " https://cns2.ef-cdn.com/Juno/12/86/30/v/128630/GE_6.6.1_v2.mp4";
 
+    public static Queue<String> getleaverForQueue(int leave) {
+        switch (leave) {
+            case 1:
+                return getLeaveOneUrlQueue();
+            case 2:
+                return getLeaveTwoUrlQueue();
+            case 3:
+                return getLeaveThreeUrlQueue();
+            case 4:
+                return getLeaveFourUrlQueue();
+            case 5:
+                return getLeaveFiveUrlQueue();
+            case 6:
+                return getLeaveSixUrlQueue();
+            default:
+                break;
+        }
+        return null;
+    }
 
     public static Queue<String> getLeaveOneUrlQueue() {
-        oneQueue.add(FOUR_1);
-        oneQueue.add(FOUR_2);
-        oneQueue.add(FOUR_3);
-        oneQueue.add(FOUR_4);
-        oneQueue.add(FOUR_5);
-        oneQueue.add(FOUR_6);
-        oneQueue.add(FOUR_7);
-        oneQueue.add(FOUR_8);
-        oneQueue.add(FOUR_9);
-        oneQueue.add(FOUR_10);
-        oneQueue.add(FOUR_11);
-        oneQueue.add(FOUR_12);
-        oneQueue.add(FOUR_13);
-        oneQueue.add(FOUR_14);
-        oneQueue.add(FOUR_15);
-        oneQueue.add(FOUR_16);
-        oneQueue.add(FOUR_17);
-        oneQueue.add(FOUR_18);
-        oneQueue.add(FOUR_19);
-        oneQueue.add(FOUR_20);
-        oneQueue.add(FOUR_21);
-        oneQueue.add(FOUR_22);
-        oneQueue.add(FOUR_23);
-        oneQueue.add(FOUR_24);
+        oneQueue.add(ONE_1);
+        oneQueue.add(ONE_2);
+        oneQueue.add(ONE_3);
+        oneQueue.add(ONE_4);
+        oneQueue.add(ONE_5);
+        oneQueue.add(ONE_6);
+        oneQueue.add(ONE_7);
+        oneQueue.add(ONE_8);
+        oneQueue.add(ONE_9);
+        oneQueue.add(ONE_10);
+        oneQueue.add(ONE_11);
+        oneQueue.add(ONE_12);
+        oneQueue.add(ONE_13);
+        oneQueue.add(ONE_14);
+        oneQueue.add(ONE_15);
+        oneQueue.add(ONE_16);
+        oneQueue.add(ONE_17);
+        oneQueue.add(ONE_18);
+        oneQueue.add(ONE_19);
+        oneQueue.add(ONE_20);
+        oneQueue.add(ONE_21);
+        oneQueue.add(ONE_22);
+        oneQueue.add(ONE_23);
+        oneQueue.add(ONE_24);
         return oneQueue;
     }
 
     public static Queue<String> getLeaveTwoUrlQueue() {
-        twoQueue.add(FOUR_1);
-        twoQueue.add(FOUR_2);
-        twoQueue.add(FOUR_3);
-        twoQueue.add(FOUR_4);
-        twoQueue.add(FOUR_5);
-        twoQueue.add(FOUR_6);
-        twoQueue.add(FOUR_7);
-        twoQueue.add(FOUR_8);
-        twoQueue.add(FOUR_9);
-        twoQueue.add(FOUR_10);
-        twoQueue.add(FOUR_11);
-        twoQueue.add(FOUR_12);
-        twoQueue.add(FOUR_13);
-        twoQueue.add(FOUR_14);
-        twoQueue.add(FOUR_15);
-        twoQueue.add(FOUR_16);
-        twoQueue.add(FOUR_17);
-        twoQueue.add(FOUR_18);
-        twoQueue.add(FOUR_19);
-        twoQueue.add(FOUR_20);
-        twoQueue.add(FOUR_21);
-        twoQueue.add(FOUR_22);
-        twoQueue.add(FOUR_23);
-        twoQueue.add(FOUR_24);
+        twoQueue.add(TWO_1);
+        twoQueue.add(TWO_2);
+        twoQueue.add(TWO_3);
+        twoQueue.add(TWO_4);
+        twoQueue.add(TWO_5);
+        twoQueue.add(TWO_6);
+        twoQueue.add(TWO_7);
+        twoQueue.add(TWO_8);
+        twoQueue.add(TWO_9);
+        twoQueue.add(TWO_10);
+        twoQueue.add(TWO_11);
+        twoQueue.add(TWO_12);
+        twoQueue.add(TWO_13);
+        twoQueue.add(TWO_14);
+        twoQueue.add(TWO_15);
+        twoQueue.add(TWO_16);
+        twoQueue.add(TWO_17);
+        twoQueue.add(TWO_18);
+        twoQueue.add(TWO_19);
+        twoQueue.add(TWO_20);
+        twoQueue.add(TWO_21);
+        twoQueue.add(TWO_22);
+        twoQueue.add(TWO_23);
+        twoQueue.add(TWO_24);
         return twoQueue;
     }
 
     public static Queue<String> getLeaveThreeUrlQueue() {
-        threeQueue.add(FOUR_1);
-        threeQueue.add(FOUR_2);
-        threeQueue.add(FOUR_3);
-        threeQueue.add(FOUR_4);
-        threeQueue.add(FOUR_5);
-        threeQueue.add(FOUR_6);
-        threeQueue.add(FOUR_7);
-        threeQueue.add(FOUR_8);
-        threeQueue.add(FOUR_9);
-        threeQueue.add(FOUR_10);
-        threeQueue.add(FOUR_11);
-        threeQueue.add(FOUR_12);
-        threeQueue.add(FOUR_13);
-        threeQueue.add(FOUR_14);
-        threeQueue.add(FOUR_15);
-        threeQueue.add(FOUR_16);
-        threeQueue.add(FOUR_17);
-        threeQueue.add(FOUR_18);
-        threeQueue.add(FOUR_19);
-        threeQueue.add(FOUR_20);
-        threeQueue.add(FOUR_21);
-        threeQueue.add(FOUR_22);
-        threeQueue.add(FOUR_23);
-        threeQueue.add(FOUR_24);
+        threeQueue.add(THREE_1);
+        threeQueue.add(THREE_2);
+        threeQueue.add(THREE_3);
+        threeQueue.add(THREE_4);
+        threeQueue.add(THREE_5);
+        threeQueue.add(THREE_6);
+        threeQueue.add(THREE_7);
+        threeQueue.add(THREE_8);
+        threeQueue.add(THREE_9);
+        threeQueue.add(THREE_10);
+        threeQueue.add(THREE_11);
+        threeQueue.add(THREE_12);
+        threeQueue.add(THREE_13);
+        threeQueue.add(THREE_14);
+        threeQueue.add(THREE_15);
+        threeQueue.add(THREE_16);
+        threeQueue.add(THREE_17);
+        threeQueue.add(THREE_18);
+        threeQueue.add(THREE_19);
+        threeQueue.add(THREE_20);
+        threeQueue.add(THREE_21);
+        threeQueue.add(THREE_22);
+        threeQueue.add(THREE_23);
         return threeQueue;
     }
 

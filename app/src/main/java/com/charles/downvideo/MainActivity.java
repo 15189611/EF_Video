@@ -15,7 +15,7 @@ import java.util.Queue;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int REQUEST_PERMISSION_STORAGE = 0x01;
-    private Queue<String> leaveFourUrlQueue;
+    private Queue<String> leaveOneUrlQueue;
     protected Intent intent;
 
     @Override
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initClick() {
+        findViewById(R.id.down_video_all).setOnClickListener(this);
         findViewById(R.id.down_video_1).setOnClickListener(this);
         findViewById(R.id.down_video_2).setOnClickListener(this);
         findViewById(R.id.down_video_3).setOnClickListener(this);
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initData() {
-        leaveFourUrlQueue = UrlManager.getLeaveFourUrlQueue();
+        leaveOneUrlQueue = UrlManager.getLeaveOneUrlQueue();
     }
 
     /**
@@ -70,13 +71,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.down_video_4) {
+        } else if (v.getId() == R.id.down_video_1) {
+        } else if (v.getId() == R.id.down_video_all) {
             //开始下载
             intent = new Intent(MainActivity.this, DownLoadService.class);
-            intent.putExtra("data", (Serializable) leaveFourUrlQueue);
-            intent.putExtra("leave", 4);
+            intent.putExtra("data", (Serializable) leaveOneUrlQueue);
+            intent.putExtra("leave", 1);
+            intent.putExtra("sizeType", "all");
             startService(intent);
-        } else if (v.getId() == R.id.down_video_1) {
-
         }
     }
 

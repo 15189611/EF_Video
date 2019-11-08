@@ -1,5 +1,6 @@
 package com.charles.downvideo;
 
+import android.app.DownloadManager;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Environment;
@@ -47,12 +48,13 @@ public class DownLoadService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         int leave = intent.getIntExtra("leave", 0);
-        Queue<String> leaveFourUrlQueue = (Queue<String>) intent.getSerializableExtra("data");
-        startQueueSize = leaveFourUrlQueue.size();
-        toDownVideo(leaveFourUrlQueue, leave);
+        String sizeType = intent.getStringExtra("sizeType");
+        Queue<String> leaveOneUrlQueue = (Queue<String>) intent.getSerializableExtra("data");
+        startQueueSize = leaveOneUrlQueue.size();
+        toDownVideo(leaveOneUrlQueue, leave, sizeType.equals("all"));
     }
 
-    private void toDownVideo(Queue<String> queue, int leave) {
+    private void toDownVideo(Queue<String> queue, int leave, boolean isRealAll) {
         if (queue.size() > thread_task_max) {
             FILE_PATH = Environment.getExternalStorageDirectory() + File.separator + "EF_VIDEO_" + leave + File.separator;
             OkDownload.getInstance().setFolder(FILE_PATH);
@@ -73,12 +75,12 @@ public class DownLoadService extends IntentService {
             String url = queue.poll();
             String fileName = "Leave" + leave + "_" + (currentStart + i) + ".mp4";
             GetRequest<File> request = OkGo.get(url);
-            toTask(url, fileName, request, queue, leave);
+            toTask(url, fileName, request, queue, leave, isRealAll);
         }
         Log.e("Charles", "size===" + queue.size());
     }
 
-    private void toTask(final String url, String fileName, GetRequest<File> request, final Queue<String> queue, final int leave) {
+    private void toTask(final String url, String fileName, GetRequest<File> request, final Queue<String> queue, final int leave, final boolean isRealAll) {
         task = OkDownload.request(url, request)
                 .register(new DownloadListener(url) {
                     @Override
@@ -101,10 +103,16 @@ public class DownLoadService extends IntentService {
                         currentFinishTask++;
                         Log.e("Charles2", "当前完成第" + currentFinishTask + "个Video任务");
                         if (currentFinishTask == queue.size()) {
-                            toDownVideo(queue, leave);
+                            Log.e("Charles2", "进行第二次下载");
+                            toDownVideo(queue, leave, isRealAll);
                         } else if (startQueueSize == currentFinishTask) {
                             Toast.makeText(getApplicationContext(), "下载完成", Toast.LENGTH_SHORT).show();
                             //leave_1完成后，下载leave_2
+                            if (isRealAll) {
+                                int currentLeave = leave + 1;
+                                startQueueSize = UrlManager.getleaverForQueue(currentLeave).size();
+                                toDownVideo(UrlManager.getleaverForQueue(currentLeave), currentLeave, true);
+                            }
                         }
                     }
 
