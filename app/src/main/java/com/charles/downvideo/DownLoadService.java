@@ -1,6 +1,5 @@
 package com.charles.downvideo;
 
-import android.app.DownloadManager;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Environment;
@@ -23,7 +22,7 @@ public class DownLoadService extends IntentService {
     private DownloadTask task;
 
     private int currentFinishTask = 0;
-    private int startQueueSize;
+    private int originalQueueSize;
     private static int thread_task_max = 12;
 
     public DownLoadService() {
@@ -50,7 +49,7 @@ public class DownLoadService extends IntentService {
         int leave = intent.getIntExtra("leave", 0);
         String sizeType = intent.getStringExtra("sizeType");
         Queue<String> leaveOneUrlQueue = (Queue<String>) intent.getSerializableExtra("data");
-        startQueueSize = leaveOneUrlQueue.size();
+        originalQueueSize = leaveOneUrlQueue.size();
         toDownVideo(leaveOneUrlQueue, leave, sizeType.equals("all"));
     }
 
@@ -77,7 +76,7 @@ public class DownLoadService extends IntentService {
             GetRequest<File> request = OkGo.get(url);
             toTask(url, fileName, request, queue, leave, isRealAll);
         }
-        Log.e("Charles", "size===" + queue.size());
+        Log.e("Charles", "size===" + currentSize);
     }
 
     private void toTask(final String url, String fileName, GetRequest<File> request, final Queue<String> queue, final int leave, final boolean isRealAll) {
@@ -94,6 +93,12 @@ public class DownLoadService extends IntentService {
 
                     @Override
                     public void onError(Progress progress) {
+                        if (progress.status == 4) {
+                            //错误时，计数的也需要+1.
+                            Log.e("Charles", progress.exception.getMessage());
+                            currentFinishTask++;
+                            // TODO: 2019-11-11  
+                        }
                         Throwable throwable = progress.exception;
                         if (throwable != null) throwable.printStackTrace();
                     }
@@ -102,16 +107,25 @@ public class DownLoadService extends IntentService {
                     public void onFinish(File file, Progress progress) {
                         currentFinishTask++;
                         Log.e("Charles2", "当前完成第" + currentFinishTask + "个Video任务");
-                        if (currentFinishTask == queue.size()) {
+                        if (currentFinishTask == thread_task_max) {
                             Log.e("Charles2", "进行第二次下载");
                             toDownVideo(queue, leave, isRealAll);
-                        } else if (startQueueSize == currentFinishTask) {
-                            Toast.makeText(getApplicationContext(), "下载完成", Toast.LENGTH_SHORT).show();
+                        } else if (originalQueueSize == currentFinishTask) {
+                            Log.e("Charles2", "下载完成");
                             //leave_1完成后，下载leave_2
                             if (isRealAll) {
                                 int currentLeave = leave + 1;
-                                startQueueSize = UrlManager.getleaverForQueue(currentLeave).size();
-                                toDownVideo(UrlManager.getleaverForQueue(currentLeave), currentLeave, true);
+                                Log.e("Charles2", "连续下载leave==" + currentLeave);
+                                currentFinishTask = 0;
+                                Queue<String> leaverForQueue = UrlManager.getLeaverForQueue(currentLeave);
+                                if (leaverForQueue == null) {
+                                    Log.e("Charles2", "全部下载完成，stopSelf");
+                                    stopSelf();
+                                } else {
+                                    originalQueueSize = leaverForQueue.size();
+                                    toDownVideo(leaverForQueue, currentLeave, true);
+                                }
+
                             }
                         }
                     }

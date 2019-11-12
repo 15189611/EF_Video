@@ -161,10 +161,49 @@ public class UrlManager {
     static String SIX_17 = "https://cns2.ef-cdn.com/Juno/12/63/64/v/126364/GE_6.5.1_v2.mp4";
     static String SIX_18 = "https://cns2.ef-cdn.com/Juno/12/63/65/v/126365/GE_6.5.2_v2.mp4";
     static String SIX_19 = "https://cns2.ef-cdn.com/Juno/12/63/62/v/126362/GE_6.5.3_v2.mp4";
-    static String SIX_20 = "https://cns2.ef-cdn.com/Juno/12/63/61/v/126361/GE_6.5.4_v2.mp4";
-    static String SIX_21 = " https://cns2.ef-cdn.com/Juno/12/86/30/v/128630/GE_6.6.1_v2.mp4";
+    static String SIX_20 = "https://cns2.ef-cdn.com/Juno/12/86/30/v/128630/GE_6.6.1_v2.mp4";
 
-    public static Queue<String> getleaverForQueue(int leave) {
+    static String SEVEN_1 = "https://cns2.ef-cdn.com/Juno/12/88/69/v/128869/GE_7.1.1_v2.mp4";
+    static String SEVEN_2 = "https://cns2.ef-cdn.com/Juno/12/88/70/v/128870/GE_7.1.2_v2.mp4";
+    static String SEVEN_3 = "https://cns2.ef-cdn.com/Juno/12/88/71/v/128871/GE_7.1.3_v2.mp4";
+    static String SEVEN_4 = "https://cns2.ef-cdn.com/Juno/12/88/72/v/128872/GE_7.1.4_v2.mp4";
+    static String SEVEN_5 = "https://cns2.ef-cdn.com/Juno/15/70/5/v/15705/5.2%20Scene%202.mp4";
+    static String SEVEN_6 = "https://cns2.ef-cdn.com/Juno/15/70/7/v/15707/5.2%20Scene%204.mp4";
+    static String SEVEN_7 = "https://cns2.ef-cdn.com/Juno/12/89/06/v/128906/GE_7.2.3_v2.mp4";
+    static String SEVEN_8 = "https://cns2.ef-cdn.com/Juno/12/89/07/v/128907/GE_7.2.4_v2.mp4";
+    static String SEVEN_9 = "https://cns2.ef-cdn.com/Juno/15/70/8/v/15708/5.3 Scene 1.mp4";
+    static String SEVEN_10 = "https://cns2.ef-cdn.com/Juno/15/70/9/v/15709/5.3 Scene 2.mp4";
+    static String SEVEN_11 = "https://cns2.ef-cdn.com/Juno/15/71/0/v/15710/5.3 Scene 3.mp4";
+    static String SEVEN_12 = "https://cns2.ef-cdn.com/Juno/15/71/1/v/15711/5.3 Scene 4.mp4";
+    static String SEVEN_13 = "https://cns2.ef-cdn.com/Juno/12/88/74/v/128874/GE_7.4.1_v2.mp4";
+    static String SEVEN_14 = "https://cns2.ef-cdn.com/Juno/12/94/34/v/129434/GE_7.4.2_v2.mp4";
+    static String SEVEN_15 = "https://cns2.ef-cdn.com/Juno/12/88/75/v/128875/GE_7.4.3_v2.mp4";
+    static String SEVEN_16 = "https://cns2.ef-cdn.com/Juno/12/88/73/v/128873/GE_7.4.4_v2.mp4";
+    static String SEVEN_17 = "https://cns2.ef-cdn.com/Juno/12/88/76/v/128876/GE_7.5.1_v2.mp4";
+    static String SEVEN_18 = "https://cns2.ef-cdn.com/Juno/12/88/77/v/128877/GE_7.5.2_v2.mp4";
+    static String SEVEN_19 = "https://cns2.ef-cdn.com/Juno/12/88/78/v/128878/GE_7.5.3_v2.mp4";
+    static String SEVEN_20 = "https://cns2.ef-cdn.com/Juno/12/88/79/v/128879/GE_7.5.4_v2.mp4";
+
+
+    static String EIGHT_1 = "https://cns2.ef-cdn.com/Juno/15/73/7/v/15737/6.2 Scene 3.mp4";
+    static String EIGHT_2 = "https://cns2.ef-cdn.com/Juno/12/99/52/v/129952/GE_8.1.3_v2.mp4";
+    static String EIGHT_3 = "https://cns2.ef-cdn.com/Juno/12/97/69/v/129769/GE_8.1.4_v2.mp4";
+    static String EIGHT_4 = "https://cns2.ef-cdn.com/Juno/15/80/8/v/15808/8.4 Scene 2.mp4";
+    static String EIGHT_5 = "https://cns2.ef-cdn.com/Juno/15/81/0/v/15810/8.4 Scene 4.mp4";
+    static String EIGHT_6 = "https://cns2.ef-cdn.com/Juno/15/80/7/v/15807/8.4 Scene 1.mp4";
+    static String EIGHT_7 = "https://cns2.ef-cdn.com/Juno/12/98/59/v/129859/GE_8.2.3_v2.mp4";
+    static String EIGHT_8 = "https://cns2.ef-cdn.com/Juno/12/98/60/v/129860/GE_8.2.4_v2.mp4";
+    static String EIGHT_9 = "https://cns2.ef-cdn.com/Juno/15/74/0/v/15740/6.3 Scene 2.mp4";
+    static String EIGHT_10 = "https://cns2.ef-cdn.com/Juno/15/74/1/v/15741/6.3 Scene 3.mp4";
+    static String EIGHT_11 = "https://cns2.ef-cdn.com/Juno/12/99/26/v/129926/GE_8.4.1_v2.mp4";
+    static String EIGHT_12 = "https://cns2.ef-cdn.com/Juno/15/74/4/v/15744/6.4 Scene 2.mp4";
+    static String EIGHT_13 = "https://cns2.ef-cdn.com/Juno/12/99/27/v/129927/GE_8.4.3_v2.mp4";
+    static String EIGHT_14 = "https://cns2.ef-cdn.com/Juno/12/99/28/v/129928/GE_8.4.4_v2.mp4";
+    static String EIGHT_15 = "https://cns2.ef-cdn.com/Juno/15/74/9/v/15749/6.5 Scene 3.mp4";
+    static String EIGHT_16 = "https://cns2.ef-cdn.com/Juno/13/05/49/v/130549/GE_8.5.3_v2.mp4";
+
+
+    public static Queue<String> getLeaverForQueue(int leave) {
         switch (leave) {
             case 1:
                 return getLeaveOneUrlQueue();
@@ -178,6 +217,18 @@ public class UrlManager {
                 return getLeaveFiveUrlQueue();
             case 6:
                 return getLeaveSixUrlQueue();
+            case 7:
+                return getLeaveSevenUrlQueue();
+            case 8:
+                return getLeaveEightUrlQueue();
+            case 9:
+                return null;
+            case 10:
+                return null;
+            case 11:
+                return null;
+            case 12:
+                return null;
             default:
                 break;
         }
@@ -339,8 +390,51 @@ public class UrlManager {
         sixQueue.add(SIX_18);
         sixQueue.add(SIX_19);
         sixQueue.add(SIX_20);
-        sixQueue.add(SIX_21);
         return sixQueue;
+    }
+
+    public static Queue<String> getLeaveSevenUrlQueue() {
+        sevenQueue.add(SEVEN_1);
+        sevenQueue.add(SEVEN_2);
+        sevenQueue.add(SEVEN_3);
+        sevenQueue.add(SEVEN_4);
+        sevenQueue.add(SEVEN_5);
+        sevenQueue.add(SEVEN_6);
+        sevenQueue.add(SEVEN_7);
+        sevenQueue.add(SEVEN_8);
+        sevenQueue.add(SEVEN_9);
+        sevenQueue.add(SEVEN_10);
+        sevenQueue.add(SEVEN_11);
+        sevenQueue.add(SEVEN_12);
+        sevenQueue.add(SEVEN_13);
+        sevenQueue.add(SEVEN_14);
+        sevenQueue.add(SEVEN_15);
+        sevenQueue.add(SEVEN_16);
+        sevenQueue.add(SEVEN_17);
+        sevenQueue.add(SEVEN_18);
+        sevenQueue.add(SEVEN_19);
+        sevenQueue.add(SEVEN_20);
+        return sevenQueue;
+    }
+
+    public static Queue<String> getLeaveEightUrlQueue() {
+        eightQueue.add(EIGHT_1);
+        eightQueue.add(EIGHT_2);
+        eightQueue.add(EIGHT_3);
+        eightQueue.add(EIGHT_4);
+        eightQueue.add(EIGHT_5);
+        eightQueue.add(EIGHT_6);
+        eightQueue.add(EIGHT_7);
+        eightQueue.add(EIGHT_8);
+        eightQueue.add(EIGHT_9);
+        eightQueue.add(EIGHT_10);
+        eightQueue.add(EIGHT_11);
+        eightQueue.add(EIGHT_12);
+        eightQueue.add(EIGHT_13);
+        eightQueue.add(EIGHT_14);
+        eightQueue.add(EIGHT_15);
+        eightQueue.add(EIGHT_16);
+        return eightQueue;
     }
 
 //    public static Queue<String> getLeaveFourUrlQueue() {

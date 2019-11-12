@@ -10,6 +10,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.model.Progress;
+import com.lzy.okgo.request.GetRequest;
+import com.lzy.okserver.OkDownload;
+import com.lzy.okserver.download.DownloadListener;
+
+import java.io.File;
 import java.io.Serializable;
 import java.util.Queue;
 
@@ -30,17 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initClick() {
         findViewById(R.id.down_video_all).setOnClickListener(this);
         findViewById(R.id.down_video_1).setOnClickListener(this);
-        findViewById(R.id.down_video_2).setOnClickListener(this);
-        findViewById(R.id.down_video_3).setOnClickListener(this);
-        findViewById(R.id.down_video_4).setOnClickListener(this);
-        findViewById(R.id.down_video_5).setOnClickListener(this);
-        findViewById(R.id.down_video_6).setOnClickListener(this);
-        findViewById(R.id.down_video_7).setOnClickListener(this);
-        findViewById(R.id.down_video_8).setOnClickListener(this);
-        findViewById(R.id.down_video_9).setOnClickListener(this);
-        findViewById(R.id.down_video_10).setOnClickListener(this);
-        findViewById(R.id.down_video_11).setOnClickListener(this);
-        findViewById(R.id.down_video_12).setOnClickListener(this);
     }
 
     private void initData() {
@@ -68,10 +64,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private int currentFinishTask = 0;
+
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.down_video_4) {
-        } else if (v.getId() == R.id.down_video_1) {
+        if (v.getId() == R.id.down_video_1) {
+            //测试错的链接
+            for (int i = 0; i < 2; i++) {
+                String url = "https://cns2.ef-cdn.com/Juno/13/05/49/v/130549/GE_8.5.3_v2.mp4";
+                GetRequest<File> request = OkGo.get(url);
+                OkDownload.request(url, request)
+                        .register(new DownloadListener(url) {
+                            @Override
+                            public void onStart(Progress progress) {
+                                Log.e("Charles", "onStart==" + progress);
+                            }
+
+                            @Override
+                            public void onProgress(Progress progress) {
+                                Log.e("Charles", "onProgress==" + progress);
+                            }
+
+
+                            @Override
+                            public void onError(Progress progress) {
+                                Log.e("Charles", "onError==" + progress);
+                                Log.e("Charles", "onError==" + progress.exception);
+                                Throwable throwable = progress.exception;
+                                if (throwable != null) throwable.printStackTrace();
+                            }
+
+                            @Override
+                            public void onFinish(File file, Progress progress) {
+                                currentFinishTask++;
+                                Log.e("Charles", "完成===" +currentFinishTask);
+                                Log.e("Charles2", "onFinish==" + progress.speed);
+                            }
+
+                            @Override
+                            public void onRemove(Progress progress) {
+                                Log.e("Charles2", "onRemove==" + progress.fileName);
+
+                            }
+                        }).fileName("EF_error.mp4").save().start();
+            }
         } else if (v.getId() == R.id.down_video_all) {
             //开始下载
             intent = new Intent(MainActivity.this, DownLoadService.class);
