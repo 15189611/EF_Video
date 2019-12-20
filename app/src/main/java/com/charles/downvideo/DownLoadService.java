@@ -97,7 +97,7 @@ public class DownLoadService extends IntentService {
                             //错误时，计数的也需要+1.
                             Log.e("Charles", progress.exception.getMessage());
                             currentFinishTask++;
-                            // TODO: 2019-11-11  
+                            // TODO: 2019-11-11
                         }
                         Throwable throwable = progress.exception;
                         if (throwable != null) throwable.printStackTrace();
