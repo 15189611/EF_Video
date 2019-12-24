@@ -203,22 +203,20 @@ public class UrlManager {
     static String EIGHT_16 = "https://cns2.ef-cdn.com/Juno/13/05/49/v/130549/GE_8.5.3_v2.mp4";
 
     static String NINE_1 = "https://cns2.ef-cdn.com/Juno/13/00/40/v/130040/GE_9.1.1_v2.mp4";
-    static String NINE_2 ="https://cns2.ef-cdn.com/Juno/13/00/41/v/130041/GE_9.1.2_v2.mp4";
-    static String NINE_3 ="https://cns2.ef-cdn.com/Juno/13/00/42/v/130042/GE_9.1.3_v2.mp4";
-    static String NINE_4 ="https://cns2.ef-cdn.com/Juno/13/00/43/v/130043/GE_9.1.4_v2.mp4";
-    static String NINE_5 ="https://cns2.ef-cdn.com/Juno/13/12/31/v/131231/GE_9.2.1_v2.mp4";
-    static String NINE_6 ="https://cns2.ef-cdn.com/Juno/13/12/32/v/131232/GE_9.2.2_v2.mp4";
-    static String NINE_7 ="https://cns2.ef-cdn.com/Juno/13/12/33/v/131233/GE_9.2.3_v2.mp4";
-    static String NINE_8 ="https://cns2.ef-cdn.com/Juno/13/12/34/v/131234/GE_9.2.4_v2.mp4";
-    static String NINE_9 ="https://cns2.ef-cdn.com/Juno/15/76/8/v/15768/7.2 Scene 2.mp4";
-    static String NINE_10 ="https://cns2.ef-cdn.com/Juno/13/12/71/v/131271/GE_9.3.2_v2.mp4";
-    static String NINE_11 ="https://cns2.ef-cdn.com/Juno/13/16/15/v/131615/GE_9.4.1_v2.mp4";
-    static String NINE_12 ="https://cns2.ef-cdn.com/Juno/13/16/16/v/131616/GE_9.4.2_v2.mp4";
-    static String NINE_13 ="https://cns2.ef-cdn.com/Juno/13/16/17/v/131617/GE_9.4.3_v2.mp4";
-    static String NINE_14 ="https://cns2.ef-cdn.com/Juno/13/16/18/v/131618/GE_9.4.4_v2.mp4";
-
-
-
+    static String NINE_2 = "https://cns2.ef-cdn.com/Juno/13/00/41/v/130041/GE_9.1.2_v2.mp4";
+    static String NINE_3 = "https://cns2.ef-cdn.com/Juno/13/00/42/v/130042/GE_9.1.3_v2.mp4";
+    static String NINE_4 = "https://cns2.ef-cdn.com/Juno/13/00/43/v/130043/GE_9.1.4_v2.mp4";
+    static String NINE_5 = "https://cns2.ef-cdn.com/Juno/13/12/31/v/131231/GE_9.2.1_v2.mp4";
+    static String NINE_6 = "https://cns2.ef-cdn.com/Juno/13/12/32/v/131232/GE_9.2.2_v2.mp4";
+    static String NINE_7 = "https://cns2.ef-cdn.com/Juno/13/12/33/v/131233/GE_9.2.3_v2.mp4";
+    static String NINE_8 = "https://cns2.ef-cdn.com/Juno/13/12/34/v/131234/GE_9.2.4_v2.mp4";
+    static String NINE_9 = "https://cns2.ef-cdn.com/Juno/15/76/8/v/15768/7.2 Scene 2.mp4";
+    static String NINE_10 = "https://cns2.ef-cdn.com/Juno/13/12/71/v/131271/GE_9.3.2_v2.mp4";
+    static String NINE_11 = "https://cns2.ef-cdn.com/Juno/13/16/15/v/131615/GE_9.4.1_v2.mp4";
+    static String NINE_12 = "https://cns2.ef-cdn.com/Juno/13/16/16/v/131616/GE_9.4.2_v2.mp4";
+    static String NINE_13 = "https://cns2.ef-cdn.com/Juno/13/16/17/v/131617/GE_9.4.3_v2.mp4";
+    static String NINE_14 = "https://cns2.ef-cdn.com/Juno/13/16/18/v/131618/GE_9.4.4_v2.mp4";
+    static String NINE_15 = "https://cns2.ef-cdn.com/Juno/13/19/57/v/131957/GE_9.6.1_v2.mp4";
 
 
     public static Queue<String> getLeaverForQueue(int leave) {
@@ -470,9 +468,9 @@ public class UrlManager {
         nineQueue.add(NINE_12);
         nineQueue.add(NINE_13);
         nineQueue.add(NINE_14);
+        nineQueue.add(NINE_15);
         return nineQueue;
     }
-
 
 
 }
